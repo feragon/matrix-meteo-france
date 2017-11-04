@@ -230,8 +230,8 @@ def main():
     save_storage()
     client.logout()
 
-    for room_timers in timers:
-        for timer in room_timers:
+    for room_id, room_timers in timers.items():
+        for timer_id, timer in room_timers.items():
             timer.cancel()
 
 
